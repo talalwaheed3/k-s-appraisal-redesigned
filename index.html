@@ -4,22 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KS Appraisal | Arizona Real Estate Appraisal Experts</title>
-    <meta name="description" content="Arizona's premier real estate appraisal company. 25+ years of experience providing professional residential and commercial property evaluations across the Phoenix metropolitan area." />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/KS-Appraisal-1-Large.png"
+    />
+    <meta
+      name="description"
+      content="Arizona's premier real estate appraisal company. 25+ years of experience providing professional residential and commercial property evaluations across the Phoenix metropolitan area."
+    />
     <meta name="author" content="KS Appraisal" />
-    <meta name="keywords" content="real estate appraisal, property appraisal, Arizona appraisal, Phoenix home appraisal, commercial appraisal, residential appraisal" />
-    
-    <meta property="og:title" content="KS Appraisal | Arizona Real Estate Appraisal Experts" />
-    <meta property="og:description" content="Professional residential and commercial property evaluations across Arizona. 25+ years of trusted service." />
+    <meta
+      name="keywords"
+      content="real estate appraisal, property appraisal, Arizona appraisal, Phoenix home appraisal, commercial appraisal, residential appraisal"
+    />
+
+    <meta
+      property="og:title"
+      content="KS Appraisal | Arizona Real Estate Appraisal Experts"
+    />
+    <meta
+      property="og:description"
+      content="Professional residential and commercial property evaluations across Arizona. 25+ years of trusted service."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
+    <meta
+      property="og:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@KSAppraisal" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      name="twitter:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+          window.chatbase = (...arguments) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(arguments);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "cf7gtbAc57swJtVc8Qewx";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
   </body>
 </html>
