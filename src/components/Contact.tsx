@@ -20,15 +20,26 @@ const Contact = () => {
     e.preventDefault();
 
     try {
+      // const WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL;
       // await axios.post("http://localhost:5678/webhook/appraisal-request", {
-      await axios.post("https://doom-nevertheless-ipaq-index.trycloudflare.com/workflow/appraisal-request", {
-        "full name": formData["full name"],
-        email: formData["email"],
-        phone: formData["phone"],
-        "appraisal type": formData["appraisal type"],
-        message: formData["message"],
+      await axios.post(
+        "https://reforms-developer-convertible-thinking.trycloudflare.com/webhook/appraisal-request",
+        {
+          "full name": formData["full name"],
+          email: formData["email"],
+          phone: formData["phone"],
+          "appraisal type": formData["appraisal type"],
+          message: formData["message"],
+        }
+      );
+      alert("Form submitted to n8n");
+      setFormData({
+        "full name": "",
+        email: "",
+        phone: "",
+        "appraisal type": "",
+        message: "",
       });
-      console.log("Form submitted to n8n:", formData);
     } catch (error) {
       console.error("Axios Error is: ", error.message);
     }
@@ -191,7 +202,8 @@ const Contact = () => {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                      placeholder="(480) 555-0123"
+                      placeholder="+12 123456789"
+                      required
                     />
                   </div>
                 </div>
@@ -229,6 +241,7 @@ const Contact = () => {
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                     placeholder="Tell us about your property..."
+                    required
                   />
                 </div>
 
