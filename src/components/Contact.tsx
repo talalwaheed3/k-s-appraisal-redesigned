@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Phone, Mail, MapPin, Send, ArrowRight } from "lucide-react";
+import { Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import commercialBuilding from "@/assets/commercial-building.jpg";
 import axios from "axios";
