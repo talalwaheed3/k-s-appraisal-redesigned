@@ -32,7 +32,7 @@ const Contact = () => {
           message: formData["message"],
         }
       );
-      alert("Form submitted to n8n");
+      alert("🎊🎊🎊 Your Appraisal Request was made Successfully 🎊🎊🎊");
       setFormData({
         "full name": "",
         email: "",
