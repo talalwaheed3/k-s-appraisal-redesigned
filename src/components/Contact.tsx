@@ -41,6 +41,7 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
+      alert("Self-Hosting timeOut 😪🥱💤")
       console.error("Axios Error is: ", error.message);
     }
   };
